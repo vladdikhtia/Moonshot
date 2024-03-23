@@ -15,6 +15,7 @@
 		31B19A112BADFB1E00203F2C /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = 31B19A0F2BADFB1E00203F2C /* missions.json */; };
 		31B19A132BAE347D00203F2C /* Astronaut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B19A122BAE347D00203F2C /* Astronaut.swift */; };
 		31B19A152BAE421000203F2C /* Bundle-Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B19A142BAE421000203F2C /* Bundle-Decodable.swift */; };
+		31B19A172BAF399A00203F2C /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31B19A162BAF399A00203F2C /* Mission.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		31B19A0F2BADFB1E00203F2C /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		31B19A122BAE347D00203F2C /* Astronaut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Astronaut.swift; sourceTree = "<group>"; };
 		31B19A142BAE421000203F2C /* Bundle-Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle-Decodable.swift"; sourceTree = "<group>"; };
+		31B19A162BAF399A00203F2C /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 				31B19A142BAE421000203F2C /* Bundle-Decodable.swift */,
 				31B19A0E2BADFB1E00203F2C /* astronauts.json */,
 				31B19A0F2BADFB1E00203F2C /* missions.json */,
+				31B19A162BAF399A00203F2C /* Mission.swift */,
 				31B19A042BADFAE400203F2C /* Assets.xcassets */,
 				31B19A062BADFAE400203F2C /* Preview Content */,
 			);
@@ -154,6 +157,7 @@
 				31B19A132BAE347D00203F2C /* Astronaut.swift in Sources */,
 				31B19A032BADFAE300203F2C /* ContentView.swift in Sources */,
 				31B19A012BADFAE300203F2C /* MoonshotApp.swift in Sources */,
+				31B19A172BAF399A00203F2C /* Mission.swift in Sources */,
 				31B19A152BAE421000203F2C /* Bundle-Decodable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
