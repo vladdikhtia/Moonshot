@@ -8,59 +8,35 @@
 import SwiftUI
 
 struct ContentView: View {
-//    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+    let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
 
     let missions: [Mission] = Bundle.main.decode("missions.json")
 
-
-    
-    let columns = [
-        GridItem(.adaptive(minimum: 150))
-    ]
-    
+    @State private var showingList = false
     var body: some View {
         NavigationStack {
-            ScrollView {
-                LazyVGrid(columns: columns) {
-                    ForEach(missions) { mission in
-                        NavigationLink {
-                            Text("Detail view")
-                        } label: {
-                            VStack {
-                                Image(mission.image)
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(width: 100, height: 100)
-                                    .padding()
-
-                                VStack {
-                                    Text(mission.displayName)
-                                        .font(.headline)
-                                        .foregroundStyle(.white)
-                                    
-                                    Text(mission.formattedLaunchData)
-                                        .font(.caption)
-                                        .foregroundStyle(.gray)
-                                }
-                                .padding(.vertical)
-                                .frame(maxWidth: .infinity)
-                                .background(.lightBackground)
-                            }
-                            .clipShape(.rect(cornerRadius: 10))
-                            .overlay(
-                                RoundedRectangle(cornerRadius: 10)
-                                    .stroke(.lightBackground)
-                            )
-                        }
+            Group{
+                if showingList {
+                    ListLayoutView(astronauts: astronauts, missions: missions)
+                        
+                    } else {
+                        GridLayoutView(astronauts: astronauts, missions: missions)
                     }
-                }
-                .padding([.horizontal, .bottom])
             }
+            .toolbar(content: {
+                Button {
+                    withAnimation(.spring()) {
+                        showingList.toggle()
+                    }
+                } label: {
+                    Image(systemName: showingList ? "square.grid.2x2.fill" : "list.bullet" )
+                        .foregroundStyle(.white)
+                }
+            })
             .navigationTitle("Moonshot")
             .background(.darkBackground)
             .preferredColorScheme(.dark)
         }
-        
     }
 }
 
